@@ -1,22 +1,22 @@
-<app-header></app-header>
+<app-header (featureselected)="onNavigate($event)"></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes></app-recipes>
+      <app-recipes *ngIf="loadedfeature==='recipe'"></app-recipes>
 
     </div>
   </div>
   <div class="row">
-    <app-shoppinglist></app-shoppinglist>
+    <app-shoppinglist *ngIf="loadedfeature !=='recipe'"></app-shoppinglist>
   </div>
 </div>
 
-<!--<div class="container" >
-<app-cockpit></app-cockpit>
+<!--<div class="container" >-->
+<!--<app-cockpit></app-cockpit>-->
 
-  <div class="row">
-    <div class="col-xs-10">
-      <app-server-element *ngFor="let serverelement of serverElements" [element]="serverelement"></app-server-element>
-    </div>
-  </div>
-</div>-->
+<!--  <div class="row">-->
+<!--    <div class="col-xs-10">-->
+<!--      <app-server-element *ngFor="let serverelement of serverElements" [element]="serverelement"></app-server-element>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->

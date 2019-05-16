@@ -7,8 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  loadedfeature ='recipe';
   serverElements = [{type: 'server', name: 'test', content: 'this is a test for server'}];
 
+  onNavigate(feature:string){
+this.loadedfeature =feature;
+  }
 
   }
 
