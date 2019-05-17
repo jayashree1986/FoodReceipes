@@ -9,7 +9,8 @@ import {Recipe} from './recipeitem/recipe.model';
 export class RecipelistComponent implements OnInit {
 
   Recipes: Recipe[] = [
-    new Recipe('Dhal', 'Its a curry', 'http://4.bp.blogspot.com/-29Vtz6KgPU0/U-CkMW1dxUI/AAAAAAAAJvg/7D90y8mSA1I/s1600/dal.jpg' )
+    new Recipe('Dhal', 'Its a curry', 'assets/Daal.png' ),
+    new Recipe('Pasta', 'Italian Main course', 'https://www.flickr.com/photos/30478819@N08/46789575261' )
     ];
 
   @Output() recipeWasSelected = new EventEmitter<Recipe>();

@@ -3,7 +3,7 @@
     <h4 class="list-group-item-heading" (click)="onSelected()">{{recipe.name}}</h4>
     <p class="list-group-item-text">{{recipe.description}}</p>
   </div>
-  <span>
-        <img [src]="recipe.imagePath" alt={{recipe.name}} class="img-responsive" style="max-height:50px;" />
+  <span *ngIf="recipe">
+        <img [src]="recipe.imagePath" alt="{{recipe.name}}" class="img-responsive" style="max-height:50px;" />
       </span>
 </a>
